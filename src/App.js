@@ -13,6 +13,7 @@ import MyAccount from "./components/myAccount";
 import SearchPage from "./components/searchPage";
 
 
+
 class App extends Component {
   state = {};
 
@@ -50,7 +51,7 @@ class App extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/" component={Home} />
           </Switch>
-        
+          
         </div>
       </React.Fragment>
     );
