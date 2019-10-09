@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Typography, Divider, Button} from "@material-ui/core";
 import homeImage from "../assets/images/image.png";
 import { withStyles } from "@material-ui/core/styles";
-
+import Footer from "./footer";
 
 
 const styles = {
@@ -149,6 +149,7 @@ class Home extends Component {
                       </Box>
                     </Paper>    
         </Grid>
+        <Footer />
       </div>
     );
   }

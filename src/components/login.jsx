@@ -8,6 +8,8 @@ import Joi from "joi-browser";
 import brandLogo from "../assets/images/brandLogo.png";
 import Form from "./common/form";
 import auth from "../services/authService";
+import Footer from "./footer";
+
 
 const styles = {
   image: {
@@ -133,6 +135,7 @@ class Login extends Form {
             </div>
           </Box>
         </React.Fragment>
+        <br /><Footer />
       </Grid>
     );
   }

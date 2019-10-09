@@ -11,6 +11,8 @@ import Logout from "./components/logout";
 import auth from "./services/authService";
 import MyAccount from "./components/myAccount";
 import SearchPage from "./components/searchPage";
+
+
 class App extends Component {
   state = {};
 

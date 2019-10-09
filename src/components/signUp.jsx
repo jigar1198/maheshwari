@@ -6,6 +6,7 @@ import brandLogo from "../assets/images/brandLogo.png";
 import Form from "./common/form";
 import Joi from "joi-browser";
 import { register } from "../services/registerService";
+import Footer from "./footer";
 
 const styles = {
   root: {
@@ -309,6 +310,7 @@ class Signup extends Form {
             </Grid>
           </Box>
         </Grid>
+        <Footer />
       </Grid>
     );
   }
