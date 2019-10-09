@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchBox from "./searchBox";
+import SearchCard from "./searchCard";
 
 class SearchPage extends Component {
   state = {};
@@ -8,6 +9,8 @@ class SearchPage extends Component {
       <React.Fragment>
         <h1>Search page</h1>
         <SearchBox />
+        <SearchCard />
+
       </React.Fragment>
     );
   }

@@ -1,10 +1,34 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
+import ReactSearchBox from "react-search-box";
+import Grid from "@material-ui/core/Grid";
 
 class SearchBox extends Component {
-  state = {};
+  data = [
+    {
+      key: "aditya",
+      value: "Aditya Sanil"
+    },
+    {
+      key: "ajinkya",
+      value: "Ajinkya Phule"
+    },
+    {
+      key: "ajeet",
+      value: "Ajeet Singh"
+    }
+  ];
+
   render() {
-    return <Button>Search</Button>;
+    return (
+      <Grid justify="center">
+        <ReactSearchBox
+          placeholder="Placeholder"
+          value="Doe"
+          data={this.data}
+          callback={record => console.log(record)}
+        />
+      </Grid>
+    );
   }
 }
 

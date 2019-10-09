@@ -50,6 +50,7 @@ class App extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/" component={Home} />
           </Switch>
+        
         </div>
       </React.Fragment>
     );
