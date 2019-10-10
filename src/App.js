@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar user={user} />
-        <div className="content">
+        {/* <div className="content">
           <Switch>
             <Route
               path="/searchUsers"
@@ -52,7 +52,8 @@ class App extends Component {
             <Route path="/" component={Home} />
           </Switch>
           
-        </div>
+        </div> */}
+        <SearchPage />
       </React.Fragment>
     );
   }

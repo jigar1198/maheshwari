@@ -7,10 +7,9 @@ class SearchPage extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Search page</h1>
+        <br /> 
         <SearchBox />
         <SearchCard />
-
       </React.Fragment>
     );
   }

@@ -1,35 +1,70 @@
 import React, { Component } from "react";
-import ReactSearchBox from "react-search-box";
+import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+
+const style = {
+  inputStyle: {
+    width: "100%",
+    height: "35px",
+    padding: "2px",
+
+      "@media only screen and (max-width: 600px)": {
+        width: "100%",
+        height: "30px",
+        marginBottom: "30px"
+
+      },
+
+  fontSize: "20px"
+
+  },
+
+
+  paperStyle: {
+
+    width: "95%",
+    height: "30px",
+    marginLeft: "25px",
+    marginBottom: "10px",
+    marginTop: "20px",
+
+    "@media only screen and (max-width: 600px)": {
+      width: "85%",
+      marginLeft: "20px",
+      height: "20px",
+      marginBottom: "33px",
+      marginTop: "6px",
+
+    }
+
+  }
+};
 
 class SearchBox extends Component {
-  data = [
-    {
-      key: "aditya",
-      value: "Aditya Sanil"
-    },
-    {
-      key: "ajinkya",
-      value: "Ajinkya Phule"
-    },
-    {
-      key: "ajeet",
-      value: "Ajeet Singh"
-    }
-  ];
+  state = {
+    query: ""
+  };
+
+  handleChange = e => {
+    const query = e.target.value;
+    this.setState({ query });
+  };
 
   render() {
+    const { classes } = this.props;
+
     return (
-      <Grid justify="center">
-        <ReactSearchBox
-          placeholder="Placeholder"
-          value="Doe"
-          data={this.data}
-          callback={record => console.log(record)}
+      <Paper className={classes.paperStyle} >
+        <input
+          placeholder="Search"
+          value={this.state.query}
+          onChange={this.handleChange}
+          className={classes.inputStyle}
         />
-      </Grid>
+      </Paper>
     );
   }
 }
 
-export default SearchBox;
+export default withStyles(style)(SearchBox);
